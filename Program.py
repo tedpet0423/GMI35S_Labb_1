@@ -13,11 +13,11 @@ while loop_running:
         #div_input_1 = Modules.take_input(1600)
         #div_input_2 = Modules.take_input(1600)
         #print( str(div_input_1)+'/'+str(div_input_2))
-        Modules.div_two_numbers(7,11)
+        Modules.div_two_numbers(7,11)  # anropar funktionen för att hitta delbara tal
         input('Press any key to continue')
     elif user_input == '2':
         print('You choose 2!')
-        Modules.guesses_made()
+        Modules.guesses_made()  # anropar funktionen för gissningsspelet
         input('Press any key to continue')
     elif user_input == '3':
         print('Exiting...')
