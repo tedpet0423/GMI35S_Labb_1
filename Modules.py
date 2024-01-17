@@ -1,3 +1,6 @@
+import random
+
+
 def take_input(max_value):
 
     user_input = input('Type a number\n')
@@ -28,3 +31,26 @@ def div_two_numbers(a, b):
     for number in range(1600):
         if number > 0 and (number % a) == 0 and (number % b) == 0:
             print(str(number))
+
+
+def guesses_made():
+    guesses_num = 0
+    number = random.randint(1, 60)
+    print('Can you guess which number im thinking of? Its a number between 1 and 60.')
+
+    keep_loop_going = True
+
+    while keep_loop_going:
+        guess = int(input('Take a guess: '))
+        guesses_num += 1
+        if guesses_num == 6:
+            print(f'Oh bummer. The number I was thinking of was {number}')
+            keep_loop_going = False
+        elif guess < number:
+            print('To low! Please try again: ')
+        elif guess > number:
+            print('To high! Please try again: ')
+        elif guess == number:
+            print(f'Nice work! You made {guesses_num} guesses to find the right number.')
+            keep_loop_going = False
+

@@ -17,7 +17,7 @@ while loop_running:
         input('Press any key to continue')
     elif user_input == '2':
         print('You choose 2!')
-        Modules.take_input(60)
+        Modules.guesses_made()
         input('Press any key to continue')
     elif user_input == '3':
         print('Exiting...')
