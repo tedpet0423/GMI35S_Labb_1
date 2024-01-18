@@ -1,7 +1,7 @@
 import random
 
 
-def div_two_numbers(a, b):
+def div_two_numbers(user_input_a, user_input_b):
     """
     Detta är en funktion för att hitta de heltal som både är delbart med a & b.
     Vi vill veta om 'number' är ett heltal som är både jämnt delbart med 'a' och 'b'.
@@ -10,7 +10,7 @@ def div_two_numbers(a, b):
     number_list = []
     for number in range(1600):  # Loopar igenom alla heltal från 1-1600#
 
-        if number > 0 and (number % a) == 0 and (number % b) == 0:
+        if number > 0 and (number % user_input_a) == 0 and (number % user_input_b) == 0:
             number_list.append(number)
     if len(number_list) == 0:
         print('No numbers found :(')
@@ -31,7 +31,7 @@ def guesses_made():
 
     while keep_loop_going:
         guess = int(input('Take a guess: '))
-        guesses_num += 1 # ökar variabelns värde med 1 tills användaren svarar rätt eller når maxantalet för gissningar
+        guesses_num += 1 # räknar upp variabelns värde med 1 tills användaren svarar rätt eller når maxantalet för gissningar
         if guess == number:
             print(f'Nice work! You made {guesses_num} guesses to find the right number.')
             keep_loop_going = False  # Avslutar loopen om användaren gissar rätt
