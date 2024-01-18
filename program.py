@@ -1,4 +1,4 @@
-import Modules
+import modules
 loop_running = True
 
 while loop_running:
@@ -10,14 +10,13 @@ while loop_running:
     user_input = input()
     if user_input == '1':
         print('You choose 1!')
-        #div_input_1 = Modules.take_input(1600)
-        #div_input_2 = Modules.take_input(1600)
-        #print( str(div_input_1)+'/'+str(div_input_2))
-        Modules.div_two_numbers(7,11)  # anropar funktionen för att hitta delbara tal
+        user_input_div_1 = input()
+        user_input_div_2 = input()
+        modules.div_two_numbers(user_input_div_1,user_input_div_2)  # anropar funktionen för att hitta delbara tal
         input('Press any key to continue')
     elif user_input == '2':
         print('You choose 2!')
-        Modules.guesses_made()  # anropar funktionen för gissningsspelet
+        modules.guesses_made()  # anropar funktionen för gissningsspelet
         input('Press any key to continue')
     elif user_input == '3':
         print('Exiting...')
